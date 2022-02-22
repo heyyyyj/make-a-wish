@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title> MAKE A WISH </title>
+    <link rel="icon" href="imgs/Vector.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/swiper.js"></script>
+</head>
+<body>
+    <header id="header">
+       <div class="center">
+        <!-- (h1>a>img)+h2+h3*7 -->
+            <h1><a href="#"><img src="imgs/logo.png" alt="로고"></a></h1>
+            <h2 class="hidden">주요 서비스</h2>
+            <!-- ul>li*4>a[href="#"] -->
+            <nav>
+                <h1 class="hidden">네비게이터</h1>
+                <ul id="nav">
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">구매</a></li>
+                    <li><a href="#">예약</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </nav>
+            <!-- dl>dt+dd*8>a[href="#"]
+            dl>dt+dd*3>a[href="#"] -->
+            <div id="logBox">
+                <p id="logBtn">로그인</p>
+                <dl>
+                    <dt class="hidden">로그인</dt>
+                    <dd><a href="#">소개</a></dd>
+                    <dd><a href="#">구매</a></dd>
+                    <dd><a href="#">예약</a></dd>
+                    <dd><a href="#">공지사항</a></dd>
+                    <dd><a href="#">조회회원가입</a></dd>
+                    <dd><a href="#">계좌조회</a></dd>
+                    <dd><a href="#">이체</a></dd>
+                    <dd><a href="#">공인인증센터</a></dd>
+                </dl>
+            </div><!-- 로그인 관련 메뉴 끝 -->
+            <dl id="util">
+                <dt class="hidden">유틸메뉴</dt>
+                <dd><a href="#">지점검색</a></dd>
+                <dd><a href="#">고객센터</a></dd>
+            </dl>
+            <!-- form>input[type="text"]+input[type="submit"]+p -->
+            <div id="srchBox">
+                <p id="srchBtn">
+                    <span class="hidden">검색창 열기</span>
+                </p>
+                <form action="test.jsp">
+                    <label for="srch" class="hidden">검색창</label><input type="text" placeholder="제품 검색" name="srch" id="srch">
+                    <input type="submit" name="btn" id="btn">
+                    <p class="closeBtn">검색창 닫기</p>
+                </form>
+            </div>
+        </div><!-- 컨텐츠 가운데로 정리하는 div -->
+    </header><!-- header End -->
+    <main>
+        <aside id="banner">
+            <h3 class="hidden">메인 배너</h3>
+            <ul id="bannerList">
+                <li class="on">
+                    <div class="center">
+                        <strong>HAPPY BIRTHDAY CAKE</strong>
+                        <p>생일 축하합니다 <br />소중한 사람의 소중한날 make a wish의 케이크와 함께해요</p>
+                        <a href="#">자세히보기</a>
+                    </div>
+                </li>
+                <li>
+                <div class="center">
+                        <strong>SPECIAL COOKIE</strong>
+                        <p>make a wish에서만 만날 수 있는 <br />다양한 종류의 스페셜한 쿠키들이 준비되어 있습니다</p>
+                        <a href="#">자세히보기</a>
+                    </div>
+                </li>
+                <li>
+                <div class="center">
+                        <strong>CUSTOMIZED CAKE</strong>
+                        <p>세상에 하나뿐인 디자인의 케이크가 필요할 때 <br />make a wish에서 커스마이징 케이크 주문을 해보세요</p>
+                        <a href="#">자세히보기</a>
+                    </div>
+                </li>
+            </ul>
+            <div id="controllBox">
+                <p class="prevBtn">이전 배너보기</p>
+                <p class="nextBtn">다음 배너보기</p>
+            
+                <div id="bannerController">
+                    <p class="bannerPlay">배너 자동재생 또는 일시멈춤</p>
+                    <ul id="bannerBullet">
+                        <li class="on">첫번째 배너로 이동하기</li>
+                        <li>두번째 배너로 이동하기</li>
+                        <li>세번째 배너로 이동하기</li>
+                    </ul>
+                </div>
+            </div>
+        </aside><!-- banner End -->
+        <script src="script/scBanner.js"></script>
+        <section id="member">
+            <h3 class="hidden">회원 서비스</h3>
+            <!-- ul>li*8>a[href="#"] -->
+            <ul>
+                <li><a href="#">케이크</a></li>
+                <li><a href="#">컵케이크</a></li>
+                <li><a href="#">쿠키</a></li>
+                <li><a href="#">생일</a></li>
+                <li><a href="#">크리스마스</a></li>
+                <li><a href="#">기념일</a></li>
+            </ul>
+        </section><!-- member End -->
+        <section id="event">
+            <div class="center">
+                <h3>SHOWCASE</h3>
+                <!-- ul*3>li*4>(p>img)+strong+time --> 
+                <!-- 3개 ul중 한개만 작성 -->
+                <h4 class="on">케이크</h4>
+                
+                <div class="conts on">
+                    <div class="swiper-container eventBox evnt1">
+                        <div class="swiper-wrapper eventList"><!-- ul들을 감싸는 div -->
+                            <ul class="swiper-slide">
+                                <li>
+                                    <p><img src="imgs/show1-1.jpg" alt="체리 스프링클 케이크"></p>
+                                    <strong>체리 스프링클 케이크</strong>
+                                    <time datetime="2020-02-19">2020.02.19</time>~<time datetime="2020-04-30">2020.04.30</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show1-2.jpg" alt="도넛 쿠앤크 케이크"></p>
+                                    <strong>도넛 쿠앤크 케이크</strong>
+                                    <time datetime="2020-02-17">2020.02.17</time> ~ <time datetime="2020-02-29">2020.02.29</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show1-3.jpg" alt="미니 마카롱 케이크"></p>
+                                    <strong>미니 마카롱 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-03-27">2020.03.27</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show1-4.jpg" alt="빅 체리 케이크"></p>
+                                    <strong>빅 체리 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-02-28">2020.02.28</time>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide">
+                                <li>
+                                    <p><img src="imgs/show2-1.jpg" alt="심플 스프링클 케이크"></p>
+                                    <strong>심플 스프링클 케이크</strong>
+                                    <time datetime="2020-02-19">2020.02.19</time>~<time datetime="2020-04-30">2020.04.30</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show2-2.jpg" alt="토끼 민트 케이크"></p>
+                                    <strong>토끼 민트 케이크</strong>
+                                    <time datetime="2020-02-17">2020.02.17</time> ~ <time datetime="2020-02-29">2020.02.29</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show2-3.jpg" alt="유니콘 케이크"></p>
+                                    <strong>유니콘 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-03-27">2020.03.27</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show2-4.jpg" alt="심플 그라데이션 케이크"></p>
+                                    <strong>심플 그라데이션 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-02-28">2020.02.28</time>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide">
+                                <li>
+                                    <p><img src="imgs/show3-1.jpg" alt="크리스마스 케이크"></p>
+                                    <strong>크리스마스 케이크</strong>
+                                    <time datetime="2020-02-19">2020.02.19</time>~<time datetime="2020-04-30">2020.04.30</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show3-2.jpg" alt="아이스크림 스프링클 케이크"></p>
+                                    <strong>아이스크림 스프링클 케이크</strong>
+                                    <time datetime="2020-02-17">2020.02.17</time> ~ <time datetime="2020-02-29">2020.02.29</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show3-3.jpg" alt="굿나잇 핑크 케이크"></p>
+                                    <strong>굿나잇 핑크 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-03-27">2020.03.27</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show3-4.jpg" alt="스모어 초코 케이크"></p>
+                                    <strong>스모어 초코 케이크</strong>
+                                    <time datetime="2020-02-03">2020.02.03</time> ~ <time datetime="2020-02-28">2020.02.28</time>
+                                </li>
+                            </ul>
+                        </div><!-- .eventList End-->
+                    </div><!-- .eventBox End -->
+                    <p class="eventBtnL prev1"><span class="hidden">이전 이벤트</span></p>
+                    <p class="eventBtnR next1"><span class="hidden">다음 이벤트</span></p>
+                    <!-- p+ul>li*3 -->
+                    <div class="controller">
+                        <p class="playing1" data-play="0"><span class="hidden">케이크case 자동재생 및 일시멈춤</span> </p>
+                        <ul class="paging1">
+                            <li class="on"><span class="hidden">케이크case 첫번째 목록들</span></li>
+                            <li><span class="hidden">케이크case 두번째 목록들</span></li>
+                            <li><span class="hidden">케이크case 세번째 목록들</span></li>
+                        </ul>
+                    </div>
+                    <p class="more"><span class="hidden">케이크case 더보기</span><a href="#">+</a></p>
+                </div><!-- conts End -->
+                <script>
+                    var myPlugin = {
+                        name: 'debugger',
+                        params: {
+                            debugger: false,
+                        },
+                        on: {
+                            
+                            slideChangeTransitionEnd: function () {
+                                var idx =0;
+                                var lastIdx = $(".paging1").children("li").length+1;
+                                //console.log(lastIdx);
+                                if (!this.params.debugger) return;
+                            
+                                console.log('slideChange', this.previousIndex, '->', this.activeIndex);
+
+
+                                if(this.activeIndex == lastIdx ){
+                                    idx = 0; //스와이퍼가 이동하는 방식이 이상하다. 마지막에서 next를 클릭 등이나 스와이퍼로 이동했을 때 마지막에서 처음으로 가면 0이 아니라, 마지막 숫자가 된다. 
+                                            //그래서 index를 0으로 억지 변경
+                                }else if(this.activeIndex == 0){
+                                    idx = lastIdx -2; //마찬가지로 마지막이 되면 0 이 된다. 그래서 index를 마지막으로 변경
+                                }else{
+                                    idx = this.activeIndex -1; //나머지는 index에서 하나씩 빼면 맞게 작동한다.  
+                                }
+
+                                console.log("테스트"+idx);
+                                $(".paging1").children("li").eq(idx).addClass("on").siblings().removeClass("on");
+                            },
+                            
+                        },
+                    };
+
+                    Swiper.use(myPlugin);
+
+                    var swiper1 = new Swiper('.evnt1',{
+                        loop:true,
+                        debugger:true,
+                    });
+                    $(".prev1").click(function(){
+                        swiper1.slidePrev();
+                        if($(".paging1").children("li.on").prev().length !=0){
+                            $(".paging1").children("li.on").removeClass("on").prev().addClass("on");
+                        }else{
+                            $(".paging1").children("li.on").removeClass("on").end().children().last().addClass("on");
+                        }
+                        
+                    });
+                    $(".next1").click(function(){
+                        swiper1.slideNext();
+                        
+                        if($(".paging1").children("li.on").next().length !=0){
+                            $(".paging1").children("li.on").removeClass("on").next().addClass("on");
+                        }else{
+                            $(".paging1").children("li.on").removeClass("on").end().children().first().addClass("on");
+                        }
+                    });
+                    
+                    var swiperPlaying1; 
+                    playingFunc1();
+                    function playingFunc1(){ 
+                        swiperPlaying1 = setTimeout(function(){
+                            $(".next1").trigger("click");
+                            playingFunc1();
+                        },3000);
+                    }
+
+                    $(".playing1").click(function(){
+                        //swiper1.
+                        
+                        if( $(this).data("play") == "0" ){
+                            //console.log("여기");    
+                            clearTimeout(swiperPlaying1);
+                            $(this).data("play", "1");
+                            $(this).css("background-position","0 0");
+                            
+                        }else{
+                            playingFunc1();
+                            $(this).data("play", "0");
+                            $(this).css("background-position","0 -1.1rem");
+                        }
+                    });
+
+                    $(".paging1").children("li").click(function(){
+                        $(this).addClass("on").siblings("li").removeClass("on");
+                        swiper1.slideTo($(this).index()+1);
+                    });
+                </script>
+                <h4>기타 제과</h4>
+                <div class="conts conts02">
+                    <div class="swiper-container eventBox evnt2">
+                        <div class="swiper-wrapper eventList">
+                            <ul class="swiper-slide">
+                                <li>
+                                    <p><img src="imgs/show4-1.jpg" alt="생딸기 미니 컵케이크"></p>
+                                    <strong>생딸기 미니 컵케이크</strong>
+                                    <time datetime="2019-03-01">2019.03.01</time>~<time datetime="2020-03-01">2020.03.01</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show4-2.jpg" alt="크림 플라워 컵케이크"></p>
+                                    <strong>크림 플라워 컵케이크</strong>
+                                    <time datetime="2020-01-02 ">2020.01.02</time> ~ <time datetime="2020-02-29">2020.02.29</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show4-3.jpg" alt="초코 몬스터 샌드쿠키"></p>
+                                    <strong>초코 몬스터 샌드쿠키</strong>
+                                    <time datetime="2020-01-02 ~ ">2020.01.02</time> ~ <time datetime="2020-12-31">2020.12.31</time>
+                                </li>
+                                <li>
+                                    <p><img src="imgs/show4-4.jpg" alt="시즌 한정 마카롱"></p>
+                                    <strong>시즌 한정 마카롱</strong>
+                                    <time datetime="2020-01-02">2020.01.02</time> ~ <time datetime="2020-12-31">2020.12.31</time>
+                                </li>
+                            </ul>
+                        </div><!-- .eventList End -->
+                    </div><!-- .eventBox End-->
+                    <p class="eventBtnL prev2"><span class="hidden">기타 제과 case 이전보기</span></p>
+                    <p class="eventBtnR next2"><span class="hidden">기타 제과 case 다음보기</span></p>
+                    <!-- p+ul>li*3 -->
+                    <div class="controller paging2">
+                        <p class="playing2" data-play="0"><span class="hidden">기타 제과 case 자동재생 및 일시멈춤</span></p>
+                        <ul>
+                            <li class="on"><span class="hidden">기타 제과 case 첫번째 목록들</span></li>
+                        </ul>
+                    </div>
+                    <p class="more"><span class="hidden">기타 제과 case 더보기 </span><a href="#">+</a></p>
+                </div><!-- conts End -->
+                <script>
+                    var swiper2 = new Swiper('.evnt2',{
+                        loop:true
+                    });
+                    $(".prev2").click(function(){
+                        
+                        swiper2.slidePrev();
+                        if($(".paging2").children("li.on").prev().length !=0){
+                            $(".paging2").children("li.on").removeClass("on").prev().addClass("on");
+                        }else{
+                            $(".paging2").children("li.on").removeClass("on").end().children().last().addClass("on");
+                        }
+                        
+                    });
+                    $(".next2").click(function(){
+                        swiper2.slideNext();
+                        
+                        if($(".paging2").children("li.on").next().length !=0){
+                            $(".paging2").children("li.on").removeClass("on").next().addClass("on");
+                        }else{
+                            $(".paging2").children("li.on").removeClass("on").end().children().first().addClass("on");
+                        }
+                    });
+                    
+                    var swiperPlaying2; 
+                    playingFunc2();
+                    function playingFunc2(){ 
+                        swiperPlaying2 = setTimeout(function(){
+                            $(".next2").trigger("click");
+                            playingFunc2();
+                        },3500);
+                    }
+
+                    $(".playing2").click(function(){
+                        //swiper1.
+                        
+                        if( $(this).data("play") == "0" ){
+                            //console.log("여기");    
+                            clearTimeout(swiperPlaying2);
+                            $(this).data("play", "1");
+                            $(this).css("background-position","0 0");
+                            
+                        }else{
+                            playingFunc2();
+                            $(this).data("play", "0");
+                            $(this).css("background-position","0 -1.1rem");
+                        }
+                    });
+
+                    $(".paging1").children("li").click(function(){
+                        $(this).addClass("on").siblings("li").removeClass("on");
+                        swiper1.slideTo($(this).index()+1);
+                    });
+                </script>
+            </div><!-- 컨텐츠 가운데로 묶어주는 역할 -->
+        </section><!-- event End -->
+        <section id="install">
+            <div class="center">
+                <div>
+                    <h3>MAKE A WISH와 함께 준비하는<br>
+                        CHRISTMAS PARTY</h3>
+                    <p>새로운 모바일뱅킹 APP 지금 다운로드 받으세요!</p>
+                    <!-- ul>li*2>img -->
+                    <ul>
+                        <li>
+                            <img src="imgs/h_intro_qr_ad.png" alt="Google Play로 이동하는 QR코드 이미지">
+                        </li>
+                        <li>
+                            <img src="imgs/h_intro_qr_ios.png" alt="App Store로 이동하는 QR코드 이미지">
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- 컨텐츠 가운데로 묶는 역할 -->
+        </section><!-- install End -->
+        <section id="bestCard">
+            <div class="center">
+                <h3>BEST 포토후기</h3>
+                <!-- div*4>(p>img)+h4+p+ul>li*2 -->
+                <div class="cardWrapper">
+                    <div class="card-item card-item-1">
+
+                        <p><img src="imgs/review01.jpg" alt=""></p>
+                        <article>
+                            <h1>세상에서 가장 맛있는 케이크</h1>
+                            <p>항상 make a wish에서만 구매하는데 이번에도 성공했어요!</p>
+                            <ul>
+                                <li><a href="#">내용보기</a></li>
+                                <li><a href="#">전체후기 보러가기</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="card-item card-item-2">
+                        <p><img src="imgs/review02.jpg" alt=""></p>
+                        <article>
+                            <h1>인생 케이크...!</h1>
+                            <p>아직도 maw케이크를 먹어보지 못한 사람이 있나요?</p>
+                            <ul>
+                                <li><a href="#">내용보기</a></li>
+                                <li><a href="#">전체후기 보러가기</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="card-item card-item-3">
+                        <p><img src="imgs/review03.jpg" alt=""></p>
+                        <article>
+                            <h1>엄마가 너무 좋아하셨어요♥</h1>
+                            <p>환갑파티에 쓰일 케이크로 주문했는데 용돈보다 케이크에 더 감동 받으셨어요 ㅎㅎ</p>
+                            <ul>
+                                <li><a href="#">내용보기</a></li>
+                                <li><a href="#">전체후기 보러가기</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="card-item card-item-4">
+                        <p><img src="imgs/review04.jpg" alt=""></p>
+                        <article>
+                            <h1>와 진짜 맛있어요</h1>
+                            <p>여기서 매번 케이크만 먹다가 마카롱도 구매해봤는데...다 잘하시는군요</p>
+                            <ul>
+                                <li> <a href="#">내용보기</a></li>
+                                <li><a href="#">전체후기 보러가기</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <style>
+                    .cardWrapper{
+                        display:flex; 
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+                    .cardWrapper>div{
+                        width:21.7rem; height:19rem;
+                        
+                    }
+                    .cardWrapper>div img{
+                        width:21.7rem;
+                        border: 0.2rem dashed #EFC5D4;}
+                    .cardWrapper h1{
+                        height:4.4rem;
+                        font-size: 1.6rem; line-height:2.2rem; font-weight:bold;
+                        color: #333;
+                    }
+                    .cardWrapper article> p{
+                        height:3.2rem;
+                        font-size: 1.2rem; line-height:1.6rem;
+                    }
+                    .cardWrapper ul{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        letter-spacing: .05em;
+                        margin: 1em 0 0 0;
+                    }
+                    .cardWrapper ul a{color: #999;}
+                    .cardWrapper ul a:hover{color:#000;}
+                </style>
+            </div><!-- 가운데로 묶어주는 역할 -->
+        </section><!-- bestCard End -->
+        <section id="notice">
+            <div class="center">
+                <div id="notice01">
+                    <h3>NOTICE</h3>
+                    <!-- dl>dt+(dd>ul>li*9>a[href="#"])+dt+dd>ul>li*7>a[href="#"] -->
+                    <dl>
+                        <dt class="on"> <a href="#"> 공지</a></dt>
+                        <dd class="txt on">
+                            <ul>
+                                <li><a href="#">크리스마스 케이크 사전 예약 안내</a></li>
+                                <li><a href="#">쿠킹 원데이 클래스 예약 안내</a></li>
+                                <li><a href="#">잠실 2호점 오픈 이벤트</a></li>
+                                <li><a href="#">어버이날 기념 토퍼 케이크 예약 안내</a></li>
+                                <li><a href="#">어린이날 기념 캐릭터 메이크 예약 안내</a></li>
+                                <li><a href="#">발렌타인데이 수제 초콜렛 가격 인하 이벤트</a></li>
+                                <li><a href="#">신정(21. 01. 01) 휴무 안내</a></li>
+                                <li><a href="#">새해 복 많이 받으세요</a></li>
+                            </ul>
+                        </dd>
+                        <dd class="more on"><a href="#"><span class="hidden">공지 더보기</span>+</a></dd>
+                        <dt> <a href="#">당첨자 발표</a></dt>
+                        <dd class="txt">
+                            <ul>
+                                <li><a href="#">잠실 2호점 오픈 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">DIY 케이크 키트 증정 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">DIY 쿠키 키트 증정 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">스승의날 사이즈업 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">어버이날 사이즈업 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">어린이날 사이즈업 이벤트 당첨자 발표</a></li>
+                                <li><a href="#">강남점 확장 이벤트 당첨자 발표</a></li>
+                            </ul>
+                        </dd>
+                        <dd class="more"><a href="#"><span class="hidden">당첨자 발표 더보기</span>+</a></a></dd>   
+                    </dl>
+                </div><!-- notice End -->
+                <script>
+                    $("#notice01>dl").children("dt").click(function(e){
+                        e.preventDefault();
+                        $(this).addClass("on").siblings("dt").removeClass("on");
+                        $(this).siblings("dd.on").removeClass("on");
+                        $(this).next("dd").addClass("on").next("dd.more").addClass("on");
+                    });
+                </script>
+                <div id="notice02">
+                    <h3 class="hidden">기타 주요내용</h3>
+                    <h4 class="hidden">기타 내용 배너</h4>
+                    <!-- ul>li*3>a[href="#"]>img -->
+
+                    <div class="swiper-container bnr">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="#"><img src="imgs/875645_h_banner_hot_03.jpg" alt="전통이 역사를 만나 세대로 이어지는 글로벌 자산관리, SC제일은행의 차별화된 프라이어리티뱅킹을 영상으로 만나보세요!"></a></li>
+                            <li class="swiper-slide"><a href="#"><img src="imgs/875644_h_banner_hot_01.jpg" alt="학자금전환대출 - 새로운 희망의 싹을 틔우세요!"></a></li>
+                            <li class="swiper-slide"><a href="#"><img src="imgs/875646_h_banner_hot_02.jpg" alt="인터넷뱅킹 로그인 불능 시 조치 안내 - 인터넷뱅킹 이용을 위한 로그인 오류 발생시 조치 방법에 대해 안내해 드립니다"></a></li>
+                        </ul>
+                        <p class="playing3" data-play="0"><span class="hidden">기타내용 배너 자동재생 또는 일시멈춤</span></p>
+                        <ul class="swiper-pagination">
+                            <!--<li><span class="hidden">1번째 기타내용 배너로 이동</span></li>
+                            <li><span class="hidden">2번째 기타내용 배너로 이동</span></li>
+                            <li><span class="hidden">3번째 기타내용 배너로 이동</span></li>-->
+                        </ul>
+                    </div>
+                    <script>
+                        var swiper3 = new Swiper('.bnr',{
+                            autoplay: {
+                                delay: 2500,
+                                disableOnInteraction: false, /*자동으로 작동되는 환경에서 마우스로 화면을 스왑을 하면, 작동할지 여부*/
+                            },
+                            loop:true,
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                        });
+                        var playing3_flag=true;
+                        $(".playing3").click(function(){
+                                        //swiper1.
+                            if(playing3_flag){
+                                swiper3.stop();
+                                playing3_flag = false;
+                            }else{
+                                swiper3.start();
+                                playing3_flag = true;
+                            }
+                                    
+                            
+                        });
+                    </script>
+
+                    <h4 class="hidden">그외 기타 내용</h4>
+                    <!-- ul>li*6>a[href="#"] -->
+                    <ul>
+                        <li><a href="#">고객우대혜택<span class="ico_cust"></span></a></li>
+                        <li><a href="#">금융사기예방<span class="ico_fin"></span></a></li>
+                        <li><a href="#">환율<span class="ico_exc"></span></a></li>
+                        <li><a href="#">금리<span class="ico_rate"></span></a></li>
+                        <li><a href="#">이용시간<span class="ico_time"></span></a></li>
+                        <li><a href="#">수수료<span class="ico_fee"></span></a></li>
+                    </ul>
+                </div><!--notice02 End-->
+            </div><!-- 컨텐츠 가운데로 묶어주는 역할 -->
+        </section><!--notice End -->
+    </main>
+    <footer id="footer">
+        <div class="center">
+            <h3 class="hidden">마무리 내용</h3>
+            <dl>
+                <dt class="hidden">하단 유틸메뉴</dt>
+                <dd><a href="#">은행소개</a></dd>
+                <dd><a href="#">은행공시</a></dd>
+                <dd><a href="#">보호금융상품등록부</a></dd>
+                <dd><a href="#">상품공시실</a></dd>
+                <dd><a href="#">개인정보처리방침</a></dd>
+                <dd><a href="#">전자민원금융사고</a></dd>
+                <dd><a href="#">제보센터(Speaking Up)</a></dd>
+                <dd><a href="#">금융사기예방안내</a></dd>
+                <dd><a href="#">채용정보</a></dd>
+                <dd><a href="#">사이트맵</a></dd>
+                <dd><a href="#">공식 유튜브</a></dd>
+                <dd><a href="#">공식 페이스북</a></dd>
+                <dd><a href="#">공식 인스타그램</a></dd>
+                <dd><a href="#">공식 지속가능경영 블로그</a></dd>
+                <dd><a href="#">스탠다드차타드그룹</a></dd>
+            </dl>
+            <address>
+                <p>03160 서울특별시 종로구 종로 47 (공평동 100) SC제일은행 본점</p>
+                <p>&copy; 2016 Standard Chartered Bank Korea Limited.</p>
+            </address>
+            <div>
+                <p><a href="#"><img src="imgs/footer_banner.gif" alt="KSQI "></a></p>
+                <p><a href="#"><img src="imgs/txt_fot_customer.png" alt="고객센터 - 1588-1599"></a></p>
+            </div>
+        </div><!-- 컨텐츠 가운데로 묶어주는 역할 -->
+    </footer><!-- footer End -->
+</body>
+</html>
+
+
+
+
+
+

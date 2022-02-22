@@ -1,0 +1,48 @@
+footer{
+    
+    background: #3c3c3c;
+    position: relative;
+    z-index: 30;
+}
+footer>.center{
+    overflow:hidden;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+footer>.center>dl{
+    overflow:hidden;
+    font-size: 1.2rem;
+}
+footer>.center>dl>dd{
+    float: left;
+}
+footer>.center>dl>dd>a{
+    padding-right: .5rem;
+    margin-right: .5rem;
+    border-right: .1rem solid #797979;
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    line-height: 2.4rem;
+    font-family: 'dotum';
+    letter-spacing: -0.04rem;
+}
+footer>.center>dl>dd:last-child>a{
+    border:0 none;
+}
+footer>.center>address{
+    clear:both; 
+    float:left; 
+    margin-top: 2.5rem;
+    font-style: normal;
+    font-size: 13px;
+    color: #d0d0d0;
+    font-family: 'dotum';
+}
+footer>.center>div{
+    float:right;
+}
+footer>.center>div>p{
+    float:left;
+}

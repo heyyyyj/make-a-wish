@@ -1,0 +1,175 @@
+#header{
+    
+}
+#header>.center{height:8rem;}
+#header>.center>*{float:left;}
+#header>.center>h1{
+    margin:2rem 4.5rem 0 0;
+}
+#header>.center>h1 img{
+    width: 18rem; height: 4rem;
+}
+#header>.center>nav>ul#nav{
+    height:8rem;
+}
+#header>.center>nav>ul#nav>li{
+    float:left; margin-right:4rem;
+    font-family: 'MaplestoryOTFLight';
+    font-size: 1.8rem;
+    line-height: 8rem;
+    letter-spacing: -0.1rem;
+}
+#header>.center>nav>ul#nav>li>a{
+    color:#2f342e;
+}
+#header>.center>div#logBox{
+    position:relative;
+    margin-top:2.5rem;
+}
+#header>.center>div#logBox>p{
+    padding-left:2.7rem;
+    width:5.2rem; height:3rem;
+    border-radius: 0.4rem;
+    background: rgba(239,197,212,1) 
+        url(../imgs/ico_lock.png) no-repeat 1rem 50%;
+    font-family: 'MaplestoryOTFLight';
+    line-height: 3rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+    color:#fff;
+    cursor:pointer;
+}
+#header>.center>div#logBox>dl{
+    display:none;
+    position:absolute; z-index:1000;
+    top:4.8rem; left: calc(50% - 10rem);
+    padding-top:1.5rem;
+    width:19.8rem; 
+    border:0.1rem solid rgba(24,161,231,1);
+    border-radius:0.6rem;
+    background:#fff;
+}
+#header>.center>div#logBox>dl:after{
+    position:absolute;
+    left:calc(50% - 0.5rem); top:-0.7rem;
+    content: "";
+    width:1.1rem; height:0.7rem;
+    background:url(../imgs/ico_layer_up.png) no-repeat 0 0;
+}
+#header>.center>div#logBox>dl>dd:not(:last-child){
+    position:relative;
+    margin:0 1.5rem; padding:0 0.7rem 0 1rem;
+    background:url(../imgs/ico_arrow_r_gray.png) no-repeat 100% 50%;
+    font:1.2rem/2.3rem "돋움",sans-serif;
+    letter-spacing: -0.1rem;
+}
+#header>.center>div#logBox>dl>dd:not(:last-child):after{
+    position:absolute; left:0; top:1rem;
+    content: "";
+    border-left:0.2rem solid rgba(24,161,231,1);
+    width:0; height:0.2rem;  
+}
+#header>.center>div#logBox>dl>dd:last-child{
+    margin-top:1.5rem;
+    height:3.7rem;
+    background:rgba(24,161,231,1);
+    font:bold 1.2rem/3.7rem "맑은고딕",sans-serif;
+}
+#header>.center>div#logBox>dl>dd:last-child>a{     
+    display:block; 
+    padding-left:7rem;
+    height:3.7rem; 
+    color:#fff;
+    background:url(../imgs/ico_shield.png) no-repeat 4.5rem 0.8rem;
+}
+#header>.center>div#logBox>dl>dd>a{
+    display: block; 
+    height:2.3rem;
+    color:#333; 
+}
+#header>.center>div#logBox>dl>dd:last-child{
+    
+}
+/* 이벤트 */
+#header>.center>div#logBox>dl>dd:not(:last-child):hover{
+    text-decoration: underline;
+    background:url(../imgs/ico_arrow_r_blue.png) no-repeat 100% 50%;
+}
+
+/* 유틸메뉴 */
+#header>.center>#util{
+    margin-left:1.6rem;
+}
+#header>.center>#util>dd{
+    position:relative;
+    float:left; padding:3.2rem 0.9rem;
+    font:1.2rem/1.2rem "맑은고딕",sans-serif;
+}
+#header>.center>#util>dd:not(:last-child):before{
+    position:absolute; right:0;
+    content:"";
+    width:0; height:1rem; border-left:0.1rem solid #cecece;
+}
+#header>.center>#util>dd>a{
+    color:#525252; 
+}
+
+/* 검색창 */
+#header>.center>div#srchBox{
+    position:relative;
+    float:right;
+}
+#header>.center>div#srchBox>#srchBtn{
+    margin-top:2.5rem;
+    width:1.8rem; height:2.8rem;
+    background:url(../imgs/ico_search.png) no-repeat 0 50%;
+    cursor:pointer;
+}
+#header>.center>div#srchBox>form{
+    position:absolute; top:2.5rem; right:0; 
+    width:23rem; height:2.8rem;
+    border:0.1rem solid rgba(239,197,212,1);
+    border-radius:0.6rem;
+    background:#fff;
+}
+#header>.center>div#srchBox>form>input[type="text"]{
+    float:left;
+    margin:0.6rem 0 0 0.4rem;
+    border:0 none;
+    outline: 0 none;
+    width:16.9rem;
+    padding-left:1rem; font-size:1.2rem;
+    color:#000;
+}
+#header>.center>div#srchBox>form>input[type="submit"]{
+    position:relative;
+    float:left; margin-top:0.3rem;
+    border:0 none;
+    width:1.8rem; height:2.2rem;
+    background:url(../imgs/ico_search.png) no-repeat 0 50%;
+    font-size:0; line-height:0;
+    cursor:pointer;
+}
+#header>.center>div#srchBox>form:after{
+    position:absolute;
+    right:2.5rem; top:0.6rem;
+    content:"";
+    width:0; height:1.8rem; border-left:0.1rem solid rgba(239,197,212,1);
+}
+#header>.center>div#srchBox>form>p.closeBtn{
+    float:right;
+    margin:0.5rem 0.5rem 0 0;
+    width:2rem; height:2rem;
+    font-size:0; line-height:0;
+    background:url(../imgs/btn_search_close.png) no-repeat 50% 50%;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
